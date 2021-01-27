@@ -1,10 +1,11 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 
 const Create = () => {
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [author, setAuthor] = useState("")
+    const history = useHistory()
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -16,6 +17,7 @@ const Create = () => {
         })
         .then(() => {
             console.log("New Blog Added")
+            history.push("/")
         })
     }
     return (
@@ -28,7 +30,7 @@ const Create = () => {
                 <textarea value={ body } onChange={(e) => setBody(e.target.value)} required />
                 <label>Author</label>
                 <input type="text" value={ author } onChange={(e) => setAuthor(e.target.value)} spellCheck="false" required />
-                <Link to="/"><button>Add Blog</button></Link>
+                <button>Add Blog</button>
             </form>
         </div>
     )
