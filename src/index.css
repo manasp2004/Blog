@@ -54,7 +54,7 @@
 }
 
 .blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 5px 10px 5px rgba(255, 255, 255, 0.39);
 }
 
 .blog-preview h2 {
@@ -65,4 +65,15 @@
 
 .blog-preview a {
   text-decoration: none;
+}
+
+.blog-details h2 {
+  color: var(--color);
+  margin-bottom: 20px;
+}
+
+.blog-details pre {
+  font-size: 20px;
+  color: #c6ecff;
+  margin-bottom: 40px;
 }
