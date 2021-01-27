@@ -142,6 +142,15 @@ button:focus {
   outline: 0  ;
 }
 
+.not-found {
+  margin-top: 10px;
+}
+
+.not-found p {
+  margin: 20px 0;
+  color: #00A6FB;
+}
+
 .loader {
   border: 16px solid #414141;
   border-radius: 50%;
