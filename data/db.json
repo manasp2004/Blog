@@ -1,0 +1,16 @@
+{
+    "blogs": [
+        {
+            "title": "My Lovely PC",
+            "body": "I have a PC with Intel i5 8th gen, GTX 1050",
+            "author": "Manas",
+            "id": 1
+        },
+        {
+            "title": "My Lovely House",
+            "body": "I have a House with 3 Bedroom and a living room",
+            "author": "Salman",
+            "id": 2
+        }
+    ]
+}
