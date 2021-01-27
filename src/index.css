@@ -77,3 +77,57 @@
   color: #c6ecff;
   margin-bottom: 40px;
 }
+
+.create {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  color: var(--color);
+  margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  display: block;
+  font-size: 18px;
+  border-radius: 7px;
+  border: 2px solid var(--color);
+  transition: 1s;
+}
+
+.create input:focus, .create textarea:focus, .create select:focus {
+  outline: 0;
+  border: 2px solid #fff;
+}
+
+.create button {
+  background-color: var(--color);
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 40px;
+  cursor: pointer;
+  width: 30%;
+  height: 2.5rem;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #00A6FB;
+  font-weight: bold;
+}
+
+button:focus {
+  outline: 0  ;
+}
