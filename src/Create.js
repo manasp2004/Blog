@@ -1,15 +1,22 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const Create = () => {
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [author, setAuthor] = useState("")
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const blog = { title, body, author }
-        // setTitle("")
-        // setBody("")
-        // setAuthor("")
+        fetch("http://localhost:8000/blogs", {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(blog)
+        })
+        .then(() => {
+            console.log("New Blog Added")
+        })
     }
     return (
         <div className="create">
@@ -21,7 +28,7 @@ const Create = () => {
                 <textarea value={ body } onChange={(e) => setBody(e.target.value)} required />
                 <label>Author</label>
                 <input type="text" value={ author } onChange={(e) => setAuthor(e.target.value)} spellCheck="false" required />
-                <button>Add Blog</button>
+                <Link to="/"><button>Add Blog</button></Link>
             </form>
         </div>
     )
